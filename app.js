@@ -11,3 +11,10 @@ let guessesRemaining = 4;
 
 console.log(numberToGuess, guessesRemaining);
 // set event listeners to update state and DOM
+magicButton.addEventListener('click', () => {
+    guessesRemaining--;
+    console.log(guessesRemaining);
+
+    const userInput = Number(userGuess.value);
+    console.log(userInput);
+})
