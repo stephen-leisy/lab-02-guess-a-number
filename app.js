@@ -23,12 +23,12 @@ magicButton.addEventListener('click', () => {
     let magicNumber = compareNumbers(userInput, numberToGuess);
 
     if (magicNumber === 1) {
-        showResults.textContent = 'Too High!'
+        showResults.textContent = 'Bogus! Way Too High!'
     } else if (magicNumber === -1) {
-        showResults.textContent = `Too Low!!`;
+        showResults.textContent = `Most Heinous! You Guessed Too Low!!`;
 
     } else {
-        showResults.textContent = 'You got it and totally win the game!';
+        showResults.textContent = 'Most Triumphant! You Win, Dude';
     }
 
 
