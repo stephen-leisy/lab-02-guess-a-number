@@ -13,8 +13,21 @@ console.log(numberToGuess, guessesRemaining);
 // set event listeners to update state and DOM
 magicButton.addEventListener('click', () => {
     guessesRemaining--;
-    console.log(guessesRemaining);
 
     const userInput = Number(userGuess.value);
-    console.log(userInput);
-})
+
+    if (userInput === numberToGuess) {
+        showResults.textContent = `You guessed it! Congrats!`;
+    }
+    if (userInput > numberToGuess) {
+        showResults.textContent = `Too High!`;
+    }
+    if (userInput < numberToGuess) {
+        showResults.textContent = `Too Low!!`;
+    }
+
+    guessesLeft.textContent = `You have ${guessesRemaining} guesses remaining`;
+
+
+
+});
