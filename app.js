@@ -20,7 +20,16 @@ magicButton.addEventListener('click', () => {
 
     const userInput = Number(userGuess.value);
 
+    let magicNumber = compareNumbers(userInput, numberToGuess);
 
+    if (magicNumber === 1) {
+        showResults.textContent = 'Too High!'
+    } else if (magicNumber === -1) {
+        showResults.textContent = `Too Low!!`;
+
+    } else {
+        showResults.textContent = 'You got it and totally win the game!';
+    }
 
 
     guessesLeft.textContent = `You have ${guessesRemaining} guesses remaining`;
