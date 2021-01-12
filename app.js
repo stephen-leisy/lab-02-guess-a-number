@@ -1,3 +1,7 @@
+// 
+import { compareNumbers } from './utils.js';
+
+
 // import functions and grab DOM elements
 const userGuess = document.getElementById('guess-input');
 const magicButton = document.getElementById('magic-button');
@@ -16,15 +20,8 @@ magicButton.addEventListener('click', () => {
 
     const userInput = Number(userGuess.value);
 
-    if (userInput === numberToGuess) {
-        showResults.textContent = `You guessed it! Congrats!`;
-    }
-    if (userInput > numberToGuess) {
-        showResults.textContent = `Too High!`;
-    }
-    if (userInput < numberToGuess) {
-        showResults.textContent = `Too Low!!`;
-    }
+
+
 
     guessesLeft.textContent = `You have ${guessesRemaining} guesses remaining`;
 
