@@ -28,6 +28,11 @@ magicButton.addEventListener('click', () => {
 
     guessesLeft.textContent = `You have ${guessesRemaining} guesses remaining`;
 
+    if (guessesRemaining === 0) {
+        showResults.textContent = `You have failed.`
+        magicButton.disabled = true;
+    }
+
 
 
 });
