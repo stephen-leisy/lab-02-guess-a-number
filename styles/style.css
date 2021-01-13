@@ -63,6 +63,7 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+    background-color: cyan;
 }
 
 .money-box {
