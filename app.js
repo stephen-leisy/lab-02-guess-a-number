@@ -39,9 +39,8 @@ magicButton.addEventListener('click', () => {
         guessesLeft.textContent = "";
     }
 
-
-    if (guessesRemaining === 0) {
-        showResults.textContent = `You have failed.`
+    if (guessesRemaining === 0 && magicNumber !== 0) {
+        showResults.textContent = `All we are is dust in the wind, dude. And by that I mean you did not win.`;
         magicButton.disabled = true;
     }
 });
